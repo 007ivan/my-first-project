@@ -1,0 +1,87 @@
+@import "nav.css";
+@import "slyder.css";
+@import "blog.css";
+@import "about-us.css";
+
+/* font-family: "RockwellRegular"; */
+@font-face {
+    font-family: "RockwellRegular";
+    src: url("../fonts/RockwellRegular/RockwellRegular.eot");
+    src: url("../fonts/RockwellRegular/RockwellRegular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/RockwellRegular/RockwellRegular.woff") format("woff"),
+    url("../fonts/RockwellRegular/RockwellRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+/* font-family: "RockwellBoldItalic"; */
+@font-face {
+    font-family: "RockwellBoldItalic";
+    src: url("../fonts/RockwellBoldItalic/RockwellBoldItalic.eot");
+    src: url("../fonts/RockwellBoldItalic/RockwellBoldItalic.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/RockwellBoldItalic/RockwellBoldItalic.woff") format("woff"),
+    url("../fonts/RockwellBoldItalic/RockwellBoldItalic.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+html {
+    font-family: "RockwellRegular";
+    font-size: 14px;
+}
+
+body {
+    background-color: #ada6a0;
+}
+
+.container {
+    max-width: 930px;
+    min-width: 640px;
+    /*padding: 0 15px;*/
+    margin: 0 auto;
+}
+
+.list-unstyled {
+    list-style: none;
+    padding-left: 0;
+}
+
+.logo {
+    background-image: url("../images/logo.png");
+    width: 325px;
+    height: 134px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid #7c7773;
+    margin-top: 13px;
+    height: 55px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+ul li {
+    display: inline;
+    padding-left: 25px;
+}
+
+.footer li a {
+    font-family: "RockwellRegular";
+    font-size: 14px;
+    color: #545454;
+    text-decoration: none;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.footer li a:hover {
+    text-decoration: underline;
+}
+
+.footer li + li {
+    padding-left: 16px;
+}

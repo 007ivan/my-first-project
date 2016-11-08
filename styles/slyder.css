@@ -1,0 +1,11 @@
+.img-slyder {
+    background-color: #ffffff;
+    border: 1px solid #7c7773;
+    /*border: 11px solid #ffffff;*/
+    margin-top: 13px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.img-slyder p {
+    text-align: center;
+}

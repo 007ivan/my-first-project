@@ -1,11 +1,85 @@
 .img-slyder {
-    background-color: #ffffff;
-    border: 1px solid #7c7773;
-    /*border: 11px solid #ffffff;*/
-    margin-top: 13px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background-color: #ffffff;
+  border: 1px solid #7c7773;
+  margin-top: 13px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  padding: 10px 10px;
 }
 
 .img-slyder p {
-    text-align: center;
+  text-align: center;
 }
+
+.carousel-wrapper {
+  position: relative;
+  height: 400px;
+  }
+
+.carousel-item {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 25px 50px;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.arrow {
+  position: absolute;
+  top: 0;
+  display: block;
+  width: 50px;
+  height: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  background: url("../images/b.png") 50% 50% / 20px no-repeat;
+}
+
+.arrow-prev {
+  left: 0;
+}
+
+.arrow-next {
+  right: 0;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.light {
+  color: white;
+}
+
+.arrow {
+  background: url("../images/m.png") 50% 50% / 20px no-repeat;
+}
+
+@media (max-width: 480px) {
+  .arrow, .light .arrow {
+    background-size: 10px;
+    background-position: 10px 50%;
+  }
+}
+
+[id^="target-item"] {
+  display: none;
+}
+
+.item-1 {
+  z-index: 2;
+  opacity: 1;
+}
+
+*:target ~ .item-1 {
+  opacity: 0;
+}
+
+#target-item-1:target ~ .item-1 {
+  opacity: 1;
+}
+
+#target-item-2:target ~ .item-2, #target-item-3:target ~ .item-3 {
+  z-index: 3;
+  opacity: 1;
+}
+

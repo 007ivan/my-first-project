@@ -3,11 +3,9 @@
 <head lang="en">
   <meta charset="UTF-8">
   <title></title>
-  <script src="jquery-1.11.0.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/styles.css">
-  <link href="index.js" rel="script">
 </head>
 <body>
 <div class="container logo"></div>
@@ -30,7 +28,27 @@
 <header>
   <div class="container slyder">
     <div class="img-slyder">
-      <p><img src="images/slyder.png" width="906" height="347"/></p>
+
+      <div class="carousel-wrapper">
+        <span id="target-item-1"></span>
+        <span id="target-item-2"></span>
+        <span id="target-item-3"></span>
+
+        <div class="carousel-item item-1" style="background: url(images/slyder.png) 50% 50% / cover;">
+          <a class="arrow arrow-prev" href="#target-item-3"></a>
+          <a class="arrow arrow-next" href="#target-item-2"></a>
+        </div>
+
+        <div class="carousel-item item-2 light" style="background: url(images/slider/priroda1.jpg) 50% 50% / cover;">
+          <a class="arrow arrow-prev" href="#target-item-1"></a>
+          <a class="arrow arrow-next" href="#target-item-3"></a>
+        </div>
+        <div class="carousel-item item-3"
+             style="background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.4)), url(images/slider/priroda2.jpg) 50% 50% / cover;">
+          <a class="arrow arrow-prev" href="#target-item-2"></a>
+          <a class="arrow arrow-next" href="#target-item-1"></a>
+        </div>
+      </div>
     </div>
   </div>
 </header>
@@ -75,34 +93,20 @@
     <a href="#" class="cat-3"></a>
     <a href="#" class="cat-4"></a>
   </div>
-  <script>
-    $(document).ready(function() {
-      $('.textT').hide();
-      $('.welcom').click(function() {
-          var $textT = $(this).next('.textT');
-          if ($textT.is(':hidden')) {
-            $textT.slideDown();
-            $(this).addClass('close');
-          } else {
-            $textT.fadeOut();
-            $(this).removeClass('close');
-          }
-        }
-      ); // окончание click
-    }); // окончание ready
-  </script>
+
   <div class="bloc-2-text">
     <div class="welcom">Welcome to the site</div>
     <div class="textT">
-    <p> Lorem ipsum dolor sit amet, uer uer Duis autem vel eum iriure Duis autemvel eum iriure dolor. ipsum dolor
-      sit amet, consectetuer Duis autem vel Lorem ipsum Lorem ipsum dolor sit amet, uer uer Duis autem vel eum
-      iriure Duis autemvel eum iriure dolor. ipsum dolor sit amet, consectetuer Lorem ipsum dolor sit amet, uer
-      uer Duis autem vel eum iriure Duis autemvel eum iriure dolor. ipsum dolor sit amet, consectetuer Duis autem
-      vel Lorem ipsum Lorem ipsum dolor sit amet, uer uer Duis autem vel eum iriure Duis autemvel eum iriure
-      dolor. ipsum dolor sit amet, consectetuer Lorem ipsum dolor sit amet, uer uer Duis autem vel eum iriure Duis
-      autemvel eum iriure dolor. ipsum dolor sit amet, sectetuer.</p>
+      <p> Lorem ipsum dolor sit amet, uer uer Duis autem vel eum iriure Duis autemvel eum iriure dolor. ipsum dolor
+        sit amet, consectetuer Duis autem vel Lorem ipsum Lorem ipsum dolor sit amet, uer uer Duis autem vel eum
+        iriure Duis autemvel eum iriure dolor. ipsum dolor sit amet, consectetuer Lorem ipsum dolor sit amet, uer
+        uer Duis autem vel eum iriure Duis autemvel eum iriure dolor. ipsum dolor sit amet, consectetuer Duis autem
+        vel Lorem ipsum Lorem ipsum dolor sit amet, uer uer Duis autem vel eum iriure Duis autemvel eum iriure
+        dolor. ipsum dolor sit amet, consectetuer Lorem ipsum dolor sit amet, uer uer Duis autem vel eum iriure Duis
+        autemvel eum iriure dolor. ipsum dolor sit amet, sectetuer.</p>
+
+    </div>
     <a href="#">more...</a>
-  </div>
   </div>
 </div>
 <footer class="container footer">
@@ -114,11 +118,9 @@
 </footer>
 
 
-  <script>
-  $(document) .ready(function () {
-    $('header') .hide() .slideDown(2000);
-  });
-</script>
+<script src="jquery-1.11.0.min.js"></script>
+<script src="index.js"></script>
+
 
 </body>
 </html>
